@@ -139,9 +139,16 @@ section ul, section ul li p{
 section ul li h3 {
     border: solid 0.2rem var(--color-primary);
     border-radius: .5rem;
+    padding: 1rem;
     background-color: var(--color-primary);
     color: var(--color-main);
     box-shadow: rgba(36, 35, 35, 0.1) 0rem 1rem 3rem;
+}
+.pp img{
+    max-width: 50rem;
+    max-height: 25rem;
+    border-radius: 50%;
+    border: solid .3rem var(--color-primary);
 }
 figcaption {
     padding: 3rem;
