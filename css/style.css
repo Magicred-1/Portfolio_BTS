@@ -165,6 +165,10 @@ footer address ul{
     background-color: var(--color-secondary);
     color: #fff;
 }
+.history:target h2{
+    color: #fff;
+}
+
 /* responsive */
 @media screen and (max-width: 90rem){
     header h1{
