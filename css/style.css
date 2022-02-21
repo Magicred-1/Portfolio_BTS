@@ -129,7 +129,19 @@ main,footer{
 section ul, section ul li p{
     line-height: 2.6rem;
     padding: 1rem;
-    text-align: justify;
+    text-align: center;
+    display: grid;
+    gap: 5rem;
+    justify-content: space-evenly;
+    align-items: stretch;
+    justify-items: center;
+}
+section ul li h3 {
+    border: solid 0.2rem var(--color-primary);
+    border-radius: .5rem;
+    background-color: var(--color-primary);
+    color: var(--color-main);
+    box-shadow: rgba(36, 35, 35, 0.1) 0rem 1rem 3rem;
 }
 figcaption {
     padding: 3rem;
