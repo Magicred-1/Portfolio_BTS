@@ -135,9 +135,16 @@ figcaption {
 }
 main section figure figcaption {
     text-align: center;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 8rem;
 }
 main section figure figcaption img {
-    max-width: 25rem;
+    max-width: 15rem;
     vertical-align: middle;
     transition: transform .2s;
 }
