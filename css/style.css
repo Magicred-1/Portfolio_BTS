@@ -60,6 +60,9 @@ header h1 .material-icons{
     display: none;
     cursor: pointer;
 }
+header em {
+    visibility: hidden;
+}
 section h2{
     top:0;
     position:sticky;
@@ -156,8 +159,7 @@ figcaption {
 main section figure figcaption {
     text-align: center;
     display: flex;
-    align-content: flex-start;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
@@ -212,11 +214,14 @@ footer address ul{
         white-space: pre-line
     }
     section ul li img {
-        max-width: 50rem;
+        max-width: 25rem;
         max-height: 25rem;
     }
     header h1 span{
         vertical-align: middle;
+    }
+    header em {
+        visibility: visible;
     }
     /* menu of */
     nav{
