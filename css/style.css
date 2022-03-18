@@ -148,6 +148,9 @@ section ul li h3 {
     color: var(--color-main);
     box-shadow: rgba(36, 35, 35, 0.1) 0rem 1rem 3rem;
 }
+.pp {
+    display: inline-table;
+}
 .pp img {
     max-width: 50rem;
     max-height: 25rem;
