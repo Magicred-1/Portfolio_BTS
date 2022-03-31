@@ -93,7 +93,12 @@ nav ul li:hover a{
     color: #fff;
     transition: transform .3s ease;
 }
-
+section h2{
+    text-align: left;
+    margin-bottom: 0.3rem;
+    padding: 1rem;
+    line-height: 4.5rem;
+}
 section ul li {
     white-space: pre-line
 }
@@ -102,6 +107,24 @@ section ul li img {
     max-width: 50rem;
     max-height: 25rem;
 }
+section:nth-child(1) ul li:nth-child(1) {
+    display: inline-table;
+}
+section:nth-child(1) ul li:nth-child(1) img {
+    max-width: 50rem;
+    max-height: 25rem;
+    border-radius: 50%;
+    border: solid .3rem var(--color-primary);
+}
+section:nth-child(1) ul li:nth-child(1) h3 {
+    border-radius: 4rem;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 1.6rem;
+    margin : 0 0 1rem;
+}
+
 .aside{
     background: linear-gradient(rgb(209 14 158 / 30%),transparent), url(../asset/retro_background.gif) no-repeat scroll center center / cover;
     min-height: 50vh;
@@ -118,12 +141,7 @@ section ul li img {
     color: #fff;
     text-shadow: .8rem .8rem 0 #333333, 1.1rem 1.1rem 0 #fafafa;
 }
-section h2{
-    text-align: left;
-    margin-bottom: 0.3rem;
-    padding: 1rem;
-    line-height: 4.5rem;
-}
+
 main,footer{
     max-width: 120.0rem;
     margin: auto;
@@ -148,15 +166,42 @@ section ul li h3 {
     color: var(--color-main);
     box-shadow: rgba(36, 35, 35, 0.1) 0rem 1rem 3rem;
 }
-.pp {
-    display: inline-table;
-}
-.pp img {
-    max-width: 50rem;
-    max-height: 25rem;
-    border-radius: 50%;
-    border: solid .3rem var(--color-primary);
-}
+#upButton {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 3.125rem;
+    height: 3.125rem;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 1.875rem;
+    right: 1.875rem;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #upButton::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 3.125rem;
+    color: #fff;
+  }
+  #upButton:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #upButton:active {
+    background-color: #555;
+  }
+  #upButton.show {
+    opacity: 1;
+    visibility: visible;
+  }
 
 figcaption {
     padding: 3rem;
@@ -258,6 +303,12 @@ input[type='submit']:hover {
         max-width: 25rem;
         max-height: 25rem;
     }
+    section ul .grid-picture-large {
+        line-height: 2.6rem;
+        padding: 1rem;
+        text-align: center;
+        display: block;
+    }
     header h1 span{
         vertical-align: middle;
     }
@@ -321,4 +372,104 @@ input[type='submit']:hover {
         width: calc(100% / 6);
     }
     
+}
+/* modale */
+section ul .grid-picture-large {
+    line-height: 2.6rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-items: center;
+}
+main .grid-picture-large{
+    display:  grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+ul figure{
+    position: relative;
+}
+ul figure .material-icons{
+    vertical-align: -.4rem;
+}
+/* Overley effect */
+ul figure figcaption{
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.6);
+    align-items: center;
+    transform: scale(0);
+    transition: all 500ms ease-in-out;
+    transform-origin: center center;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+}
+ul figure:hover figcaption{
+    transform: scale(1);
+}
+/* modale */
+.parent-modale{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+.parent-modale .modale{
+    max-width: 40rem;
+    padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.6);
+    z-index: 2;
+    cursor: pointer;
+    
+    
+}
+.parent-modale .modale .desc{
+    position: static;
+    transition: none;
+    background-color: #fff;
+    color: #222;
+    
+}
+.modale-active{
+    z-index: 1;
+    opacity: 1;
+    transform-origin: center center;
+}
+.parent-modale .modale .desc h3{
+    font-size: x-large;
+    font-weight: 400;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+}
+.parent-modale .modale .desc p :is(time){
+    padding: 1rem;
+}
+.parent-modale .modale button{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    z-index: 2;
+    color: #fff;
+    cursor: pointer;
 }
