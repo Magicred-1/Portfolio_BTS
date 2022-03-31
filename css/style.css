@@ -383,6 +383,14 @@ section ul .grid-picture-large {
     align-items: center;
     justify-items: center;
 }
+section ul h3 em {
+    font-size: 3.5rem;
+    padding: 1rem;
+}
+.grid-picture-large img {
+    border-radius: 0;
+    background-color: #000;
+}
 main .grid-picture-large{
     display:  grid;
     grid-template-columns: repeat(5, 1fr);
