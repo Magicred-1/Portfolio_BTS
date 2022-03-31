@@ -392,7 +392,7 @@ section ul h3 em {
     background-color: #000;
 }
 main .grid-picture-large{
-    display:  grid;
+    display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     padding: 1rem;
@@ -437,7 +437,6 @@ ul figure:hover figcaption{
     transition: all 0.4s ease-in-out;
 }
 .parent-modale .modale{
-    max-width: 40rem;
     padding: 1rem;
     position: fixed;
     top: 50%;
@@ -448,7 +447,10 @@ ul figure:hover figcaption{
     z-index: 2;
     cursor: pointer;
     
-    
+}
+.parent-modale .modale img{
+    max-width: 60rem;
+    max-height: 60rem;
 }
 .parent-modale .modale .desc{
     position: static;
