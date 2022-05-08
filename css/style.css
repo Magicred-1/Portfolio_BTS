@@ -119,6 +119,12 @@ section:nth-child(1) ul li:nth-child(1) img {
     border-radius: 1rem;
     border: solid .3rem var(--color-primary);
 }
+section:nth-child(1) ul li:nth-child(4) img {
+    max-width: 50rem;
+    max-height: 25rem;
+    border-radius: 1rem;
+    border: solid .3rem var(--color-primary);
+}
 section:nth-child(1) ul li:nth-child(1) h3 {
     border-radius: 2rem;
     padding: 1rem;
