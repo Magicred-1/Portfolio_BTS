@@ -437,6 +437,7 @@ ul figure .material-icons{
 ul figure:hover {
     cursor: pointer;
 }
+}
 /* Overley effect */
 ul figure figcaption{
     display: grid;
