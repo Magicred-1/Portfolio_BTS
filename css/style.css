@@ -108,7 +108,7 @@ section ul li p:first-child{
 
 section ul li img {
     max-width: 50rem;
-    max-height: 25rem;
+    max-height: 20rem;
 }
 section:nth-child(1) ul li:nth-child(1) {
     display: inline-table;
@@ -330,8 +330,8 @@ input[type='submit']:hover {
         white-space: pre-line
     }
     section ul li img {
-        max-width: 25rem;
-        max-height: 25rem;
+        max-width: 20rem;
+        max-height: 20rem;
     }
     section ul .grid-picture-large {
         line-height: 2.6rem;
