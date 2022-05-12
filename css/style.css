@@ -195,6 +195,11 @@ section ul li figure p {
     border-radius: .5rem;
     border: .1rem solid rgb(0, 0, 0);
 }
+section ul li figure img {
+    max-width: 15rem;
+    max-height: 20rem;
+    vertical-align: middle;
+}
 
 /* #upButton {
     display: inline-block;
@@ -243,7 +248,7 @@ main section figure figcaption {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 8rem;
+    gap: 2rem;
 }
 main section figure figcaption img {
     max-width: 15rem;
@@ -417,8 +422,8 @@ section ul .grid-picture-large {
     text-align: center;
     display: flex;
     gap: 5rem;
-    align-items: center;
-    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 section ul h3 em {
     font-size: 3.5rem;
